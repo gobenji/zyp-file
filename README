@@ -1,0 +1,20 @@
+ABOUT
+=====
+
+zyp-file is a clone of apt-file for zypp, the package management system
+used by openSUSE.
+
+Execute `zyp-file.sh -h` for some usage information.
+
+
+CONTRIBUTING
+============
+bug reports and patches may be sent to benjamin.poirier@gmail.com
+
+
+TODO
+====
+* parse the content of /etc/zypp/repos.d instead of hardcoding only one source
+  in zyp-file.sh
+* use the data in repodata/*filelists.sqlite.bz2 instead of ARCHIVES.gz which
+  is not always present
