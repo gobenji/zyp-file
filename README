@@ -16,5 +16,14 @@ TODO
 ====
 * parse the content of /etc/zypp/repos.d instead of hardcoding only one source
   in zyp-file.sh
-* use the data in repodata/*filelists.sqlite.bz2 instead of ARCHIVES.gz which
-  is not always present
+* use the following file lists instead of ARCHIVES.gz which is not always
+  present; according to the repository type:
+	* yast2
+		suse/setup/descr/packages.gz
+		Availabe in the local cache, /var/cache/zypp/raw
+	* rpm-md
+		repodata/*-filelists.xml.gz
+		The actual name of the file is available in
+		repodata/repomd.xml. repomd.xml is in the local cache but the
+		file list is not, it must be retrieved from the repository's
+		url.
