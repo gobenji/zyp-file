@@ -81,7 +81,7 @@ case "$action" in
 		dir=$(dirname "$userarch")
 		mkdir -p "$dir"
 		cd "$dir"
-		wget -N "http://download.opensuse.org/distribution/$VERSION_ID/repo/oss/ARCHIVES.gz"
+		wget -N "http://download.opensuse.org/distribution/leap/$VERSION_ID/repo/oss/ARCHIVES.gz"
 		;;
 	search | show)
 		if [ -z "$arch" ]; then
